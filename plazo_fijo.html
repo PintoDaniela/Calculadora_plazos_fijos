@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cálculo de ahorros</title>
+	<script type="text/javascript" src="C:\Users\danif\Desktop\plazos_fijos_JS/plazo_fijo.js"></script>
+	<style type="text/css">
+		.box{
+			height: 500px;
+			width: 350px;
+			/*border: 2px solid #330033;*/
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		#total{
+			padding: 10px;
+			color: #D5D8DC;
+			background-color: #2C3E50 ;
+		}
+		#calculo{
+			height: 200px;
+			width: 350px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		div{
+			float: left;
+			margin: 2px;
+			background-color: #D4EFDF;
+		}
+		h3{
+			color: #D5D8DC;
+			background-color: #2C3E50;
+			padding: 10px;
+			margin-top: 0px;
+		}
+		.title{
+			background-color: #2C3E50;
+			padding: 20px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="all">
+	<h3 class="title">IMPACTO DE RECUCIR O ELIMINAR GASTOS</h3>
+	<div class="box">
+		<h3>Ahorro mensual</h3>		
+			<form action="#" method="POST" id="datos" onsubmit="return false;"> 
+				<p>
+					<label for="Gastos1:">Gastos a reducir o eliminar 1:</label>
+					<input type="text" name="Gastos1" id="Gastos1"/>
+				</p>
+				<p>
+					<label for="valor1:">Ahorro mensual 1:</label>
+					<input type="number" id="valor1"/>					
+				</p>	
+				<hr>
+				<p>
+					<label for="Gastos2:">Gastos a reducir o eliminar 2:</label>
+					<input type="text" name="Gastos2" id="Gastos2"/>	
+				</p>
+				<p>
+					<label for="valor2:">Ahorro mensual 2:</label>
+					<input type="number" id="valor2"/>	
+				</p>
+				<hr>				
+				<p>
+					<label for="Gastos3:">Gastos a reducir o eliminar 3:</label>
+					<input type="text" name="Gastos3" id="Gastos3"/>
+				</p>
+				<p>
+					<label for="valor3:">Ahorro mensual 3:</label>
+					<input type="number" id="valor3"/>
+				</p>
+				<br>
+							
+				<input type="submit" value="Sumar" id="submit" class="submit" />
+				<br>
+				<p id="suma">
+					Suma: <span></span>
+				</p>
+			
+				
+			</form>
+		</div>
+		<div id="calculo">
+			<form action="#" method="POST" id="ahorro" onsubmit="return false;">
+				<p>
+					<label for="tasa:">Tasa de ahorro mensual:</label>
+					<input type="number" id="tasa"/>
+				</p>
+				<p>
+					<label for="tiempo:">Tiempo estimado de ahorro:</label>
+					<input type="number" id="tiempo"/>
+				</p>
+				<input type="submit" value="Calcular" id="submit" class="submit" />
+				<br>
+				<p id="total">
+					Total: <span></span>
+				</p>	
+			</form>
+		</div>
+	</div>
+
+
+			
+</body>
+</html>
