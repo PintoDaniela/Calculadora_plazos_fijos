@@ -6,39 +6,68 @@
 	<script type="text/javascript" src="plazo_fijo.js"></script>
 	<style type="text/css">
 		.box{
+			font-family: monospace;
 			height: 500px;
 			width: 350px;
 			/*border: 2px solid #330033;*/
 			padding-left: 10px;
 			padding-right: 10px;
+			margin-right:auto;
+			margin-left:auto;
+
 		}
 		#total{
+			font-family: monospace;
 			padding: 10px;
-			color: #D5D8DC;
-			background-color: #2C3E50 ;
+			color: #5BFFA3;
+			background-color: #4A235A ;
 		}
 		#calculo{
+			font-family: monospace;
 			height: 200px;
 			width: 350px;
 			padding-left: 10px;
 			padding-right: 10px;
 		}
 		div{
+			font-family: monospace;
 			float: left;
-			margin: 2px;
-			background-color: #D4EFDF;
+			margin: 2px;			
+			background-color: #17202A;
 		}
 		h3{
-			color: #D5D8DC;
-			background-color: #2C3E50;
+			font-family: monospace;
+			color: #5BFFA3;
+			background-color: #4A235A;
 			padding: 10px;
 			margin-top: 0px;
 		}
 		.title{
-			background-color: #2C3E50;
+			font-family: monospace;
+			background-color: #4A235A;
 			padding: 20px;
 		}
+		p{
+			font-family: monospace;
+			color: #FF3D92;
+		}
+		#submit{
+			font-family: monospace;
+			background-color: #5BFFA3;
+			color: #4A235A;
+			padding: 10px;
+		}
+		.text{
+			font-family: monospace;
+			float: left;
+		}
+		.number{
+			font-family: monospace;
 		
+		}
+		label{
+			float: left;
+		}
 	</style>
 </head>
 <body>
@@ -49,29 +78,41 @@
 			<form action="#" method="POST" id="datos" onsubmit="return false;"> 
 				<p>
 					<label for="Gastos1:">Gastos a reducir o eliminar 1:</label>
-					<input type="text" name="Gastos1" id="Gastos1"/>
+					<br>
+					<input class="text" type="text" name="Gastos1" id="Gastos1"/>
+					<br>
 				</p>
 				<p>
+					<br>
 					<label for="valor1:">Ahorro mensual 1:</label>
-					<input type="number" id="valor1"/>					
+					<br>				
+					<input class="number" type="number" id="valor1"/>										
 				</p>	
 				<hr>
 				<p>
 					<label for="Gastos2:">Gastos a reducir o eliminar 2:</label>
-					<input type="text" name="Gastos2" id="Gastos2"/>	
+					<br>
+					<input class="text" type="text" name="Gastos2" id="Gastos2"/>	
+					<br>
 				</p>
 				<p>
+					<br>
 					<label for="valor2:">Ahorro mensual 2:</label>
-					<input type="number" id="valor2"/>	
+					<br>
+					<input class="number" type="number" id="valor2"/>	
 				</p>
 				<hr>				
 				<p>
 					<label for="Gastos3:">Gastos a reducir o eliminar 3:</label>
-					<input type="text" name="Gastos3" id="Gastos3"/>
+					<br>
+					<input class="text" type="text" name="Gastos3" id="Gastos3"/>
+					<br>
 				</p>
 				<p>
+					<br>
 					<label for="valor3:">Ahorro mensual 3:</label>
-					<input type="number" id="valor3"/>
+					<br>
+					<input class="number" type="number" id="valor3"/>
 				</p>
 				<br>
 							
@@ -88,11 +129,15 @@
 			<form action="#" method="POST" id="ahorro" onsubmit="return false;">
 				<p>
 					<label for="tasa:">Tasa de ahorro mensual:</label>
-					<input type="number" id="tasa"/>
+					<br>
+					<input class="number" type="number" id="tasa"/>
+					<br>
 				</p>
 				<p>
-					<label for="tiempo:">Tiempo estimado de ahorro:</label>
-					<input type="number" id="tiempo"/>
+					<label for="tiempo:">Tiempo estimado de ahorro en años:</label>
+					<br>
+					<input class="number" type="number" id="tiempo"/>
+					<br>
 				</p>
 				<input type="submit" value="Calcular" id="submit" class="submit" />
 				<br>
