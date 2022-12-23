@@ -1,1 +1,1 @@
-:rocket: Esta calculadora fue el primer pequeño proyecto que realicé al entrar en contacto con el mundo de la programación. Tiene varios aspectos a mejorar, pero la comparto como un recuerdo de aquel primer encuentro, en el cual decidí continuar este camino. :rocket: 
+:rocket: Esta calculadora fue el primer pequeño proyecto que realicé al entrar en contacto con el mundo de la programación :seedling: Tiene varios aspectos a mejorar, pero la comparto como un recuerdo de aquel primer encuentro, en el cual decidí continuar este camino. :rocket: 
