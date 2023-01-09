@@ -4,10 +4,8 @@ window.addEventListener('load', function(){
 	
 		var datos = document.querySelector("#datos");
 		var suma = document.querySelector("#suma span");
-		var total = document.querySelector("#total span");
-		var tasa = document.querySelector("#tasa").value;
-		// tiene que estar dentro de la funcion, si no no lo toma
-		
+		var total = document.querySelector("#total span");		
+		var sumaValores;		
 
 		datos.addEventListener('submit', function(){
 			console.log('suma ejecutada');
@@ -19,8 +17,8 @@ window.addEventListener('load', function(){
 			var valor3 = parseInt(document.querySelector("#valor3").value);
 				if (isNaN(valor3)) valor3 = 0;
 		
-			console.log(valor2 + valor1 + valor3);
-			suma.innerHTML = valor1 + valor2 + valor3;
+			sumaValores = valor1 + valor2 + valor3;
+			suma.innerHTML = sumaValores;
 
 			return false;
 		});
@@ -29,23 +27,17 @@ window.addEventListener('load', function(){
 		var calculo = document.querySelector("#calculo");
 
 		calculo.addEventListener('submit',function(){
-			console.log('calculo ejecutado');
+			console.log('Cálculo ejecutado');
+
+			var tiempo = document.querySelector("#tiempo").value;	
 			var tasa = document.querySelector("#tasa").value;
-			var tiempo = document.querySelector("#tiempo").value;
-			var base = 1 + Number(tasa/100);
-			var exponente = (tiempo*12);
-			
-			var tasaAnual = Math.pow(base, exponente);
+			var valorAcumulado = sumaValores;
+			var meses = tiempo*12;	
 
-			console.log(tasa/100);	
-			console.log(base, exponente);
-			console.log("tasa anual: " +(tasaAnual).toFixed(2));		
+			for(let i=0; i<meses; i++){
+				valorAcumulado = valorAcumulado+(valorAcumulado*tasa/100);
+			}
 
-			total.innerHTML = (Number(suma.innerHTML*tasaAnual)).toFixed(2);
-
+			total.innerHTML = (valorAcumulado.toFixed(2));
 		});
-
-
-
-
 });
