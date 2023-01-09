@@ -3,49 +3,76 @@
 <head>
 	<meta charset="utf-8">
 	<title>Cálculo de ahorros</title>
-	<script type="text/javascript" src="plazo_fijo.js"></script>
+	<script type="text/javascript" src="../src/plazo_fijo.js"></script>
 	<style type="text/css">
+		body{
+			background-image: url('../images/binary-sky.jpg');
+			background-size: cover; /*para que me ajuste la imagen al fondo*/			
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.all{
+			margin: 70px;
+			width: 730px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: rgb(0, 0, 0, 0.7);
+			padding: 20px;
+			border-radius: 15px;
+		}
+		
+		.container{
+			width: 700px;			
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
 		.box{
 			font-family: monospace;
 			height: 500px;
 			width: 350px;
-			/*border: 2px solid #330033;*/
 			padding-left: 10px;
 			padding-right: 10px;
-			margin-right:auto;
-			margin-left:auto;
-
 		}
 		#total{
 			font-family: monospace;
 			padding: 10px;
-			color: #5BFFA3;
-			background-color: #4A235A ;
+			font-weight: bold;
+			font-size: 15px;
+			color: rgb(66, 243, 104);
+			background-color: #4A235A;	
+			border-radius: 15px;					
 		}
 		#calculo{
 			font-family: monospace;
-			height: 200px;
+			height: 500px;
 			width: 350px;
 			padding-left: 10px;
 			padding-right: 10px;
 		}
 		div{
 			font-family: monospace;
-			float: left;
 			margin: 2px;			
-			background-color: #17202A;
 		}
-		h3{
+		h3{			
 			font-family: monospace;
-			color: #5BFFA3;
+			color: rgb(66, 243, 104);
 			background-color: #4A235A;
 			padding: 10px;
 			margin-top: 0px;
+			border-radius: 15px;
 		}
 		.title{
 			font-family: monospace;
 			background-color: #4A235A;
-			padding: 20px;
+			padding: 20px 0px;
+			width: 100%;
+			text-align: center;
 		}
 		p{
 			font-family: monospace;
@@ -53,13 +80,16 @@
 		}
 		#submit{
 			font-family: monospace;
-			background-color: #5BFFA3;
+			font-weight: bold;
+			background-color: rgb(66, 243, 104);
 			color: #4A235A;
 			padding: 10px;
+			border-radius: 15px;
 		}
 		.text{
 			font-family: monospace;
 			float: left;
+			font-weight: bold;
 		}
 		.number{
 			font-family: monospace;
@@ -71,10 +101,11 @@
 	</style>
 </head>
 <body>
-	<div class="all">
-	<h3 class="title">IMPACTO DE RECUCIR O ELIMINAR GASTOS:</h3>
-	<div class="box">
-		<h3>Ahorro mensual</h3>		
+	<section class="all">
+		<h3 class="title">IMPACTO DE RECUCIR O ELIMINAR GASTOS</h3>
+		<section class="container">
+			<div class="box">
+			<h3>Ahorro mensual</h3>		
 			<form action="#" method="POST" id="datos" onsubmit="return false;"> 
 				<p>
 					<label for="Gastos1:">Gastos a reducir o eliminar 1:</label>
@@ -120,9 +151,7 @@
 				<br>
 				<p id="suma">
 					Suma: <span></span>
-				</p>
-			
-				
+				</p>				
 			</form>
 		</div>
 		<div id="calculo">
@@ -146,9 +175,8 @@
 				</p>	
 			</form>
 		</div>
-	</div>
-
-
+		</section>		
+	</section>
 			
 </body>
 </html>
